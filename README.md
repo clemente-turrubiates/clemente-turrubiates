@@ -11,30 +11,18 @@ Small, sharp primitives that do one thing well.
   <img src="./stats-light.svg" alt="GitHub stats" />
 </picture>
 
-</div>
-
-<br>
-
-<div align="center">
+<br><br>
 
 <sub><strong>STACK</strong></sub>
 
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/-.svg?logo=python&logoColor=black&color=ffffff">
-  <img src="https://shieldcn.dev/badge/-.svg?logo=python&logoColor=white&color=0f0f0f" alt="Python" />
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/-.svg?logo=rust&logoColor=black&color=ffffff">
-  <img src="https://shieldcn.dev/badge/-.svg?logo=rust&logoColor=white&color=0f0f0f" alt="Rust" />
+  <source media="(prefers-color-scheme: dark)" srcset="./stack-dark.svg">
+  <img src="./stack-light.svg" alt="Python, Rust" />
 </picture>
 
-</div>
-
-<br>
-
-<div align="center">
+<br><br>
 
 <sub><strong>PRINCIPLES</strong></sub>
 
@@ -45,16 +33,12 @@ Small, sharp primitives that do one thing well.
   <img src="./principles-light.svg" alt="Principles" />
 </picture>
 
-</div>
-
-<br>
-
-<div align="center">
+<br><br>
 
 <a href="https://x.com/pedroeclemente">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/-.svg?logo=x&logoColor=black&color=ffffff">
-    <img src="https://shieldcn.dev/badge/-.svg?logo=x&logoColor=white&color=0f0f0f" alt="X" />
+    <source media="(prefers-color-scheme: dark)" srcset="./x-dark.svg">
+    <img src="./x-light.svg" alt="X" />
   </picture>
 </a>
 
