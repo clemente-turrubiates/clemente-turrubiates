@@ -14,15 +14,15 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Routing-Over_Orchestration-violet.svg?variant=outline&mode=dark">
-    <img src="https://shieldcn.dev/badge/Routing-Over_Orchestration-violet.svg?variant=outline&mode=light" alt="Routing over orchestration" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Routing_Over_Orchestration-7c3aed.svg?mode=dark">
+    <img src="https://shieldcn.dev/badge/Routing_Over_Orchestration-7c3aed.svg?mode=light" alt="Routing over orchestration" />
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Observable-Failure-rose.svg?variant=outline&mode=dark">
-    <img src="https://shieldcn.dev/badge/Observable-Failure-rose.svg?variant=outline&mode=light" alt="Observable failure" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Observable_Failure-f43f53.svg?mode=dark">
+    <img src="https://shieldcn.dev/badge/Observable_Failure-f43f53.svg?mode=light" alt="Observable failure" />
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Honest-Scope-cyan.svg?variant=outline&mode=dark">
-    <img src="https://shieldcn.dev/badge/Honest-Scope-cyan.svg?variant=outline&mode=light" alt="Honest scope" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/Narrow_Tools_Honest_Scope-06b6d4.svg?mode=dark">
+    <img src="https://shieldcn.dev/badge/Narrow_Tools_Honest_Scope-06b6d4.svg?mode=light" alt="Narrow tools, honest scope" />
   </picture>
 </p>
