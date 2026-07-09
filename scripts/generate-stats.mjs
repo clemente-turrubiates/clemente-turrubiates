@@ -118,25 +118,32 @@ const { level, percentile } = calculateRank({
 });
 
 const rows = [
-  ["Public repos", String(repoCount)],
-  ["Contributions (past year)", String(contributions)],
-  ["Top language", topLanguage],
+  ["Repos", String(repoCount)],
+  ["Contributions", String(contributions)],
+  ["Language", topLanguage],
 ];
 
-function renderSvg({ fg, bg, border }) {
-  const width = 420;
+function renderSvg({ fg, bg, border, mode }) {
+  const width = 380;
   const rowHeight = 26;
   const padY = 20;
+  const labelX = 20;
+  const valueX = 200;
+  const dividerX = 224;
+  const ringSize = 68;
   const textBlockHeight = rows.length * rowHeight;
-  const ringSize = 76;
   const height = Math.max(padY * 2 + textBlockHeight, padY * 2 + ringSize);
 
   const rowsSvg = rows
     .map((row, i) => {
       const y = padY + i * rowHeight + rowHeight / 2 + 4;
+      const delay = (0.15 + i * 0.1).toFixed(2);
       return `
-        <text x="20" y="${y}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="${fg}">${row[0]}</text>
-        <text x="270" y="${y}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="${fg}" text-anchor="end" font-weight="600">${row[1]}</text>`;
+        <g opacity="0">
+          <animate attributeName="opacity" from="0" to="1" begin="${delay}s" dur="0.35s" fill="freeze" />
+          <text x="${labelX}" y="${y}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="${fg}" opacity="0.7">${row[0]}</text>
+          <text x="${valueX}" y="${y}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="${fg}" text-anchor="end" font-weight="600">${row[1]}</text>
+        </g>`;
     })
     .join("");
 
@@ -148,25 +155,44 @@ function renderSvg({ fg, bg, border }) {
   const dashOffset = circumference * (1 - progress);
 
   const ring = `
-    <circle cx="${ringCx}" cy="${ringCy}" r="${radius}" fill="none" stroke="${border}" stroke-width="4" />
-    <circle cx="${ringCx}" cy="${ringCy}" r="${radius}" fill="none" stroke="${fg}" stroke-width="4"
-      stroke-linecap="round" stroke-dasharray="${circumference}" stroke-dashoffset="${dashOffset}"
-      transform="rotate(-90 ${ringCx} ${ringCy})" />
-    <text x="${ringCx}" y="${ringCy + 7}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
-      font-size="22" font-weight="700" fill="${fg}" text-anchor="middle">${level}</text>`;
+    <g opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="0.1s" dur="0.4s" fill="freeze" />
+      <circle cx="${ringCx}" cy="${ringCy}" r="${radius}" fill="none" stroke="${border}" stroke-width="4" />
+      <circle cx="${ringCx}" cy="${ringCy}" r="${radius}" fill="none" stroke="${fg}" stroke-width="4"
+        stroke-linecap="round" stroke-dasharray="${circumference}" stroke-dashoffset="${circumference}"
+        transform="rotate(-90 ${ringCx} ${ringCy})">
+        <animate attributeName="stroke-dashoffset" from="${circumference}" to="${dashOffset}" begin="0.3s" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1" keyTimes="0;1" />
+      </circle>
+      <text x="${ringCx}" y="${ringCy + 7}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+        font-size="21" font-weight="700" fill="${fg}" text-anchor="middle">${level}</text>
+    </g>`;
 
-  const divider = `<line x1="240" y1="${padY}" x2="240" y2="${height - padY}" stroke="${border}" />`;
+  const divider = `<line x1="${dividerX}" y1="${padY}" x2="${dividerX}" y2="${height - padY}" stroke="${border}" />`;
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="10" fill="${bg}" stroke="${border}" />
-  ${rowsSvg}
-  ${divider}
-  ${ring}
+  const shadow =
+    mode === "dark"
+      ? `<feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45" />`
+      : `<feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0f0f0f" flood-opacity="0.08" />`;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height + 12}" viewBox="0 0 ${width} ${height + 12}">
+  <defs>
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="160%">
+      ${shadow}
+    </filter>
+  </defs>
+  <g filter="url(#card-shadow)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0s" dur="0.4s" fill="freeze" />
+    <animateTransform attributeName="transform" type="translate" from="0 6" to="0 0" begin="0s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1" keyTimes="0;1" />
+    <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="12" fill="${bg}" stroke="${border}" />
+    ${rowsSvg}
+    ${divider}
+    ${ring}
+  </g>
 </svg>`;
 }
 
-const light = renderSvg({ fg: "#0f0f0f", bg: "#ffffff", border: "#e1e0d9" });
-const dark = renderSvg({ fg: "#ffffff", bg: "#0f0f0f", border: "#2c2c2a" });
+const light = renderSvg({ fg: "#0f0f0f", bg: "#ffffff", border: "#e1e0d9", mode: "light" });
+const dark = renderSvg({ fg: "#ffffff", bg: "#0f0f0f", border: "#2c2c2a", mode: "dark" });
 
 await writeFile(new URL("../stats-light.svg", import.meta.url), light);
 await writeFile(new URL("../stats-dark.svg", import.meta.url), dark);

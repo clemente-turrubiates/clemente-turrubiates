@@ -4,13 +4,6 @@
 
 Small, sharp primitives that do one thing well.
 
-<a href="https://x.com/pedroeclemente">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/-.svg?logo=x&logoColor=black&color=ffffff">
-    <img src="https://shieldcn.dev/badge/-.svg?logo=x&logoColor=white&color=0f0f0f" alt="X" />
-  </picture>
-</a>
-
 <br>
 
 <picture>
@@ -41,11 +34,28 @@ Small, sharp primitives that do one thing well.
 
 <br>
 
-<div align="center"><sub><strong>PRINCIPLES</strong></sub></div>
+<div align="center">
+
+<sub><strong>PRINCIPLES</strong></sub>
+
 <br>
 
-| | |
-|---|---|
-| **Routing over orchestration** | Send work to the right primitive instead of centrally managing it. |
-| **Observable failure** | A failure should be visible and diagnosable, never silent. |
-| **Honest scope** | A tool does exactly what it claims — nothing more. |
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./principles-dark.svg">
+  <img src="./principles-light.svg" alt="Principles" />
+</picture>
+
+</div>
+
+<br>
+
+<div align="center">
+
+<a href="https://x.com/pedroeclemente">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/-.svg?logo=x&logoColor=black&color=ffffff">
+    <img src="https://shieldcn.dev/badge/-.svg?logo=x&logoColor=white&color=0f0f0f" alt="X" />
+  </picture>
+</a>
+
+</div>
