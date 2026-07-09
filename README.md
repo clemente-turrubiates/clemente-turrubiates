@@ -6,7 +6,7 @@ I build tools for AI agent concurrency — small, sharp primitives that do one t
 
 <p>
   <a href="https://www.python.org"><img src="https://shieldcn.dev/badge/Python-3.13+-3776AB.svg?logo=python&logoColor=white" alt="Python" /></a>
-  <a href="https://www.rust-lang.org"><img src="https://shieldcn.dev/badge/Rust-1.75+-000000.svg?logo=rust&logoColor=white" alt="Rust" /></a>
+  <a href="https://www.rust-lang.org"><img src="https://shieldcn.dev/badge/Rust-1.75+-CE422B.svg?logo=rust&logoColor=white" alt="Rust" /></a>
 </p>
 
 ## What I care about
