@@ -1,22 +1,24 @@
-<p align="center">
-  <img src="https://shieldcn.dev/badge/PEDRO-6366F1.svg?logoColor=white" alt="Pedro" height="34" />
-</p>
+<div align="center">
 
-<p align="center"><code>Small, sharp primitives that do one thing well.</code></p>
+# Pedro
 
-<p align="center">
-  <a href="https://x.com/pedroeclemente">
-    <img src="https://shieldcn.dev/badge/-.svg?logo=x&logoColor=white&color=0f0f0f" alt="X" />
-  </a>
-</p>
+Small, sharp primitives that do one thing well.
 
-<p align="center">
-  <img src="https://shieldcn.dev/badge/-.svg?logo=python&logoColor=white&color=3776AB" alt="Python" />
-  <img src="https://shieldcn.dev/badge/-.svg?logo=rust&logoColor=white&color=CE422B" alt="Rust" />
-</p>
+[![X](https://shieldcn.dev/badge/-.svg?logo=x&logoColor=white&color=0f0f0f)](https://x.com/pedroeclemente)
 
-<p align="center">
-  <img src="https://shieldcn.dev/badge/Routing_Over_Orchestration-a5b4fc.svg" alt="Routing over orchestration" />
-  <img src="https://shieldcn.dev/badge/Observable_Failure-6366f1.svg?logoColor=white" alt="Observable failure" />
-  <img src="https://shieldcn.dev/badge/Honest_Scope-4338ca.svg?logoColor=white" alt="Honest scope" />
-</p>
+</div>
+
+<br>
+
+### Stack
+
+![Python](https://shieldcn.dev/badge/-.svg?logo=python&logoColor=white&color=3776AB)
+![Rust](https://shieldcn.dev/badge/-.svg?logo=rust&logoColor=white&color=CE422B)
+
+### Principles
+
+| | |
+|---|---|
+| **Routing over orchestration** | Send work to the right primitive instead of centrally managing it. |
+| **Observable failure** | A failure should be visible and diagnosable, never silent. |
+| **Honest scope** | A tool does exactly what it claims — nothing more. |
