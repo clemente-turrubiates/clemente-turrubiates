@@ -2,9 +2,10 @@
 
 I build tools for AI agent concurrency — small, sharp primitives that do one thing well.
 
-## Pinned
+## Stack
 
-- **[cascade-mcp](https://github.com/clemente-turrubiates/cascade-mcp)** — a write-conflict resolver for concurrent AI agents. Not an orchestration framework; a precision tool for when writes are expensive to redo and fields have real semantic tolerance. Ships an MCP server + a stress-test suite that proves the behavior can't be cherry-picked.
+- Python
+- Rust
 
 ## What I care about
 
