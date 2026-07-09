@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="118" viewBox="0 0 360 118">
+  <rect x="0.5" y="0.5" width="359" height="117" rx="10" fill="#0f0f0f" stroke="#2c2c2a" />
+  
+        <text x="20" y="37" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#ffffff">Public repos</text>
+        <text x="340" y="37" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#ffffff" text-anchor="end" font-weight="600">2</text>
+        <text x="20" y="63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#ffffff">Contributions (past year)</text>
+        <text x="340" y="63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#ffffff" text-anchor="end" font-weight="600">40</text>
+        <text x="20" y="89" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#ffffff">Top language</text>
+        <text x="340" y="89" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#ffffff" text-anchor="end" font-weight="600">Python</text>
+</svg>
