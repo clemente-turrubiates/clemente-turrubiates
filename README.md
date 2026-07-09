@@ -4,8 +4,10 @@ I build tools for AI agent concurrency — small, sharp primitives that do one t
 
 ## Stack
 
-- Python
-- Rust
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="48" height="48" alt="Python" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" width="48" height="48" alt="Rust" />
+</p>
 
 ## What I care about
 
