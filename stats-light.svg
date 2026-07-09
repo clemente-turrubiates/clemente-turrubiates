@@ -4,7 +4,7 @@
         <text x="20" y="37" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#0f0f0f">Public repos</text>
         <text x="340" y="37" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#0f0f0f" text-anchor="end" font-weight="600">2</text>
         <text x="20" y="63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#0f0f0f">Contributions (past year)</text>
-        <text x="340" y="63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#0f0f0f" text-anchor="end" font-weight="600">40</text>
+        <text x="340" y="63" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#0f0f0f" text-anchor="end" font-weight="600">41</text>
         <text x="20" y="89" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#0f0f0f">Top language</text>
         <text x="340" y="89" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#0f0f0f" text-anchor="end" font-weight="600">Python</text>
 </svg>
