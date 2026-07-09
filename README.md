@@ -11,11 +11,22 @@ Small, sharp primitives that do one thing well.
   </picture>
 </a>
 
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./stats-dark.svg">
+  <img src="./stats-light.svg" alt="GitHub stats" />
+</picture>
+
 </div>
 
 <br>
 
-### Stack
+<div align="center">
+
+<sub><strong>STACK</strong></sub>
+
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/badge/-.svg?logo=python&logoColor=black&color=ffffff">
@@ -26,17 +37,15 @@ Small, sharp primitives that do one thing well.
   <img src="https://shieldcn.dev/badge/-.svg?logo=rust&logoColor=white&color=0f0f0f" alt="Rust" />
 </picture>
 
-### Principles
+</div>
+
+<br>
+
+<div align="center"><sub><strong>PRINCIPLES</strong></sub></div>
+<br>
 
 | | |
 |---|---|
 | **Routing over orchestration** | Send work to the right primitive instead of centrally managing it. |
 | **Observable failure** | A failure should be visible and diagnosable, never silent. |
 | **Honest scope** | A tool does exactly what it claims — nothing more. |
-
-### Stats
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./stats-dark.svg">
-  <img src="./stats-light.svg" alt="GitHub stats" />
-</picture>
